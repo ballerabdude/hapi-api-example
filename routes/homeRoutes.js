@@ -9,7 +9,7 @@ function CNSayingRoutes(server) {
   server.route({
     method: 'GET',
     path: '/home',
-    handler: homeController.getHome
+    handler: homeController.getAllHomes
   });
 
 }

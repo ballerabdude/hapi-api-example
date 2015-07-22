@@ -2,7 +2,8 @@
 
 let Hapi = require('hapi'),
     fs = require('fs'),
-    config = require('./config/application');
+    config = require('./config/application'),
+    db = require('./config/db.js');
 
 
 let serverConfig = { };
@@ -10,7 +11,7 @@ let server = new Hapi.Server(serverConfig);
 
 server.app.name = 'Home Api';
 
-server.connection({port: 8000});
+server.connection({port: 8000, routes: {cors: true}});
 
 // Iterates through all ./routes files to init the routes for use in the api
 fs.readdirSync('./routes').forEach(function(curFile) {

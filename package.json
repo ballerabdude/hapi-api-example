@@ -14,6 +14,7 @@
   "author": "Abdul Hagi",
   "license": "ISC",
   "dependencies": {
-    "hapi": "^8.8.0"
+    "hapi": "^8.8.0",
+    "mongoose": "^4.0.7"
   }
 }
